@@ -1,0 +1,104 @@
+:root {
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
+    --bg-card-hover: #1e293b;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --primary: #3b82f6;
+    --accent: #22c55e;
+    --font-mono: 'Consolas', 'Courier New', monospace;
+    --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-dark); color: var(--text-main); font-family: var(--font-sans); line-height: 1.8; }
+
+h1, h2, h3, h4 { font-family: var(--font-mono); font-weight: 700; color: var(--primary); }
+h1 { font-size: 3rem; margin-bottom: 1.5rem; text-align: center; }
+h2 { font-size: 2.2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--bg-card-hover); padding-bottom: 1rem; }
+h3 { font-size: 1.5rem; color: var(--text-main); margin-bottom: 1rem; }
+h4 { font-size: 1.2rem; color: var(--accent); margin-bottom: 0.5rem; margin-top: 1.5rem;}
+
+p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem; }
+strong { color: var(--text-main); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+section { padding: 5rem 0; }
+
+/* Estilos Foto de Perfil */
+.profile-container { display: flex; justify-content: center; margin-bottom: 2rem; }
+.profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+
+.tags-wrapper { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
+.tag { background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.4rem 1rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.9rem; border: 1px solid rgba(59, 130, 246, 0.3); }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 3rem; }
+@media (max-width: 768px) { .project-grid { grid-template-columns: 1fr; } }
+
+.project-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid var(--bg-card-hover); transition: 0.3s; }
+.project-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+.project-img-container { width: 100%; height: 280px; background-color: #1e293b; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--bg-card-hover); }
+.project-img-container img { width: 100%; height: 100%; object-fit: cover; }
+.img-placeholder-text { color: var(--primary); font-family: var(--font-mono); position: absolute; }
+
+.project-content { padding: 2.5rem; }
+
+.experience-block { background: var(--bg-card); padding: 3rem; border-radius: 12px; margin-bottom: 3rem; border-left: 4px solid var(--primary); }
+.experience-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.date-badge { background: var(--bg-dark); color: var(--accent); padding: 0.5rem 1rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.9rem; }
+
+/* Acordeón Servidor */
+details { background: var(--bg-card); border-radius: 8px; border: 1px solid var(--primary); margin-top: 4rem; overflow: hidden; }
+summary { background: rgba(59, 130, 246, 0.1); padding: 1.5rem 2rem; font-family: var(--font-mono); font-size: 1.2rem; color: var(--primary); font-weight: bold; cursor: pointer; user-select: none; transition: 0.3s; }
+summary:hover { background: rgba(59, 130, 246, 0.2); }
+.details-content { padding: 2.5rem; border-top: 1px solid rgba(59, 130, 246, 0.2); }
+
+.btn { display: inline-block; background: var(--primary); color: white; padding: 1.2rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: var(--font-mono); transition: 0.3s; text-align: center; }
+.btn:hover { background: #2563eb; }
+footer { padding: 4rem 0; text-align: center; border-top: 1px solid var(--bg-card); margin-top: 4rem; }
+
+/* --- SELECTOR DE IDIOMAS --- */
+.language-selector {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    z-index: 1000;
+    font-family: monospace, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Toque cristal moderno */
+}
+
+.language-selector a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.language-selector a:hover {
+    color: #00ffcc; /* Cambia esto por tu color corporativo si quieres */
+}
+
+.language-selector a.active {
+    color: #00ffcc; /* Color para el idioma seleccionado */
+    pointer-events: none; /* Desactiva el clic en el idioma actual */
+}
+
+.language-selector span {
+    margin: 0 10px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .language-selector {
+        top: 15px;
+        right: 20px;
+        font-size: 0.9rem;
+    }
+}

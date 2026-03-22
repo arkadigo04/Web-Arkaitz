@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="IT Engineering Portfolio. Industrial software development, cybersecurity, artificial intelligence, and self-hosted infrastructure.">
+    <meta name="keywords" content="IT Engineer, Cybersecurity, Artificial Intelligence, TrueNAS, Docker, OpenCV, Industrial Frontend, Software Development">
+    <meta name="author" content="Arkaitz Diez Gonzalez">
+    
+    <title>Arkaitz Diez Gonzalez | Software & Systems Engineering</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Arkaitz Diez - IT Infrastructure",
+      "url": "https://arkaitzdiez.com",
+      "author": {
+        "@type": "Person",
+        "name": "Arkaitz Diez Gonzalez",
+        "jobTitle": "IT Engineer"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/ciberseguridad.css">
+
+    <style>
+        .project-img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e293b;
+            border-bottom: 1px solid #1e293b;
+        }
+        
+        .project-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .profile-img { 
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid #3b82f6; 
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); 
+        }
+
+        /* --- SELECTOR DE IDIOMAS --- */
+        .language-selector {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            z-index: 1000;
+            font-family: monospace, sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .language-selector a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .language-selector a:hover {
+            color: #3b82f6;
+        }
+
+        .language-selector a.active {
+            color: #3b82f6;
+            pointer-events: none;
+        }
+
+        .language-selector span {
+            margin: 0 10px;
+            color: #ffffff;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .language-selector {
+                top: 15px;
+                right: 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="language-selector">
+        <a href="index.html">ES</a>
+        <span>|</span>
+        <a href="index_en.html" class="active">EN</a>
+    </div>
+
+    <header style="padding-top: 5rem; padding-bottom: 2rem;">
+        <div class="container">
+            
+            <div class="profile-container">
+                <img src="../assets/img/ciberseguridad/perfil-arkaitz.png" alt="Arkaitz Diez Gonzalez" class="profile-img">
+            </div>
+
+            <h1>Arkaitz Diez Gonzalez</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.3rem;">
+                IT Engineering. Systems architecture, Cybersecurity auditing, and applied Artificial Intelligence development. Soon to be pursuing a Master's degree in Cybersecurity.
+            </p>
+            <div class="tags-wrapper" style="justify-content: center;">
+                <span class="tag">University of Burgos</span>
+                <span class="tag">Graduation 2026</span>
+                <span class="tag">hola@arkaitzdiez.com</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="experiencia">
+            <h2>Professional & Industrial Experience</h2>
+
+            <div class="experience-block">
+                <div class="experience-header">
+                    <h3>Software Engineer (Internship) — Grupo Nicolás Correa</h3>
+                    <span class="date-badge">Feb 2026 - Present | Burgos</span>
+                </div>
+                
+                <h4>High-Performance Industrial Frontend</h4>
+                <p>Design and optimization of dynamic HMI interfaces for milling systems using GTK and QML technologies. The main objective has been the reduction of response latency, drastically improving user experience and plant operability.</p>
+
+                <h4>Regulatory Cybersecurity</h4>
+                <p>Leadership of the technical adaptation process to the European Cyber Resilience Act (CRA) directive. Comprehensive execution of structural risk analysis and assurance of the secure software development lifecycle for corporate software.</p>
+            </div>
+
+            <div class="experience-block" style="border-left-color: var(--accent);">
+                <div class="experience-header">
+                    <h3>Founder & CEO — Recellwix S.L.</h3>
+                    <span class="date-badge">2022 - 2025</span>
+                </div>
+                
+                <h4>Comprehensive Management and Operations</h4>
+                <p>Complete foundation and administration of a limited liability company dedicated to the secondary technological market. Management of the supply chain, control of international logistics, and establishment of premium customer service protocols.</p>
+
+                <h4>Hardware Engineering & E-commerce</h4>
+                <p>Repair of microcomponents and advanced diagnostics on mobile device motherboards. Concurrently, design and implementation of the e-commerce platform using Shopify, integrating secure payment gateways and advanced analytics tools.</p>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Featured Projects (Engineering & AI)</h2>
+            
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/futbol/motiontics-app.png" alt="Motiontics computer vision system analyzing a match">
+                    </div>
+                    <div class="project-content">
+                        <h3>Motiontics (Thesis)</h3>
+                        <p>Development of a computer vision system based on Deep Learning for the automatic detection of tactical patterns and real-time video clip segmentation. Implementation of player tracking algorithms and defensive play detection using neural networks.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV & YOLOv8</span>
+                            <span class="tag">Artificial Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/ciberseguridad/tacticstats-app.jpg" alt="Interface of the Android application TacticStats">
+                    </div>
+                    <div class="project-content">
+                        <h3>TacticStats</h3>
+                        <p>Comprehensive development of a mobile application with a robust architecture for tactical data management. Includes real-time synchronization of relational databases and advanced visualization of sports performance statistics.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">Android Studio</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/ciberseguridad/mundo-wumpus.png" alt="Graphical simulation of Wumpus World">
+                    </div>
+                    <div class="project-content">
+                        <h3>Wumpus World</h3>
+                        <p>Programming of an intelligent autonomous agent based on the Minimax algorithm. The system optimizes state space search using heuristics to guarantee survival and optimal decision-making in environments of maximum uncertainty.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">Heuristics</span>
+                            <span class="tag">Minimax</span>
+                            <span class="tag">Classical AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/ciberseguridad/control-fpga.png" alt="FPGA board programmed for hardware control">
+                    </div>
+                    <div class="project-content">
+                        <h3>Hardware Control on FPGA</h3>
+                        <p>Design of a complex state machine implemented directly on hardware using an FPGA board. Strict management of timing, control of input/output signals, and establishment of hardware security systems using pure digital logic.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">VHDL / Verilog</span>
+                            <span class="tag">FPGA</span>
+                            <span class="tag">Real-Time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/ciberseguridad/brandubh-java.png" alt="Capture of the Brandubh board game programmed in Java">
+                    </div>
+                    <div class="project-content">
+                        <h3>Board Game: Brandubh</h3>
+                        <p>Complete development of the historic Celtic board game Brandubh (a variant of Hnefatafl) programmed entirely in Java. Implementation of complex board logic, movement validation, and victory conditions using Object-Oriented Programming.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">Java</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">Eclipse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="../assets/img/ciberseguridad/sistemas-operativos-bash.png" alt="Console executing Operating Systems algorithms">
+                    </div>
+                    <div class="project-content">
+                        <h3>Operating Systems Simulation</h3>
+                        <p>Low-level control practice for system resource simulation and management. Programming of fundamental process scheduling and memory replacement algorithms, including FCFS/SJF, Paging, MFU, and NC-R.</p>
+                        <div class="tags-wrapper" style="margin-bottom: 0;">
+                            <span class="tag">Operating Systems</span>
+                            <span class="tag">Memory Management</span>
+                            <span class="tag">Bash / Shell</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="infraestructura" style="padding-top: 0;">
+            
+            <details>
+                <summary>⛁ Server Architecture: Infrastructure and local deployment</summary>
+                <div class="details-content">
+                    <p>This website is not hosted on a traditional commercial hosting service. It has been designed, deployed, and secured entirely from scratch to operate from a local data center (Homelab).</p>
+
+                    <h4>Hardware and Storage System</h4>
+                    <p>The site operates on a server managed by TrueNAS SCALE. The storage layer is configured with high-redundancy ZFS pools, defining specific Datasets and managing recursive permissions through strict Access Control Lists (ACLs) in Linux.</p>
+
+                    <h4>Containerized Deployment</h4>
+                    <p>The web architecture is isolated in containers. A pure Nginx image configured to serve high-performance static content is used. System permission conflicts (UID/GID) between the TrueNAS host and Docker have been resolved through precise volume mapping.</p>
+
+                    <h4>Networking and Ingress Security</h4>
+                    <p>The server does not expose management ports to the public network. All incoming traffic is securely routed through reverse tunnels and proxy rules. The transport layer is secured with SSL/TLS encryption, complemented by Cloudflare's DDoS protection and DNS management.</p>
+                </div>
+            </details>
+
+        </section>
+
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <a href="mailto:hola@arkaitzdiez.com" class="btn">Contact via Email</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="../index_en.html" style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 1.1rem;">← cd .. (Return to root directory)</a>
+        </div>
+    </footer>
+
+</body>
+</html>

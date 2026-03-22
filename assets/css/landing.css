@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* El body por defecto no tiene bloqueos, es libre */
+body {
+    background-color: #000;
+}
+
+/* 🧠 TRUCO SEO */
+.seo-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Base de la estructura */
+.split-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.panel {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+}
+
+.content {
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+    transition: transform 0.6s ease;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin: 0 auto 2rem auto;
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+/* COLORES IT */
+.panel-it { background: linear-gradient(135deg, #020617 0%, #0f172a 100%); color: #f8fafc; border-right: 2px solid #334155; }
+.panel-it .badge { background-color: #1e293b; color: #3b82f6; border: 1px solid #3b82f6; font-family: 'Courier New', monospace; }
+.panel-it h2 { color: #3b82f6; font-family: 'Courier New', Courier, monospace; }
+.panel-it p { color: #94a3b8; line-height: 1.6; }
+.panel-it .btn { background-color: #3b82f6; color: white; border: 1px solid #3b82f6; }
+
+/* COLORES FÚTBOL */
+.panel-futbol { background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); color: #0f172a; }
+.panel-futbol .badge { background-color: #fde047; color: #022c22; }
+.panel-futbol h2 { color: #022c22; text-transform: uppercase; }
+.panel-futbol p { color: #475569; font-weight: 500; line-height: 1.6; }
+.panel-futbol .btn { background-color: #10b981; color: #022c22; }
+
+/* =========================================
+   SOLO PARA ORDENADOR (Bloqueo de scroll y Hover)
+   ========================================= */
+@media (min-width: 769px) {
+    body { 
+        height: 100vh; 
+        overflow: hidden; /* Aquí clavamos la pantalla */
+    }
+    .split-layout { 
+        height: 100vh; 
+    }
+    .panel:hover { flex: 1.5; }
+    .split-layout:hover .panel:not(:hover) { filter: grayscale(80%) brightness(0.6); }
+    .panel:hover .content { transform: translateY(-20px); }
+    .panel:hover p, .panel:hover .btn { opacity: 1; transform: translateY(0); }
+    .panel-it .btn:hover { background-color: #2563eb; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+    .panel-futbol .btn:hover { background-color: #059669; color: white; transform: scale(1.05); }
+}
+
+/* =========================================
+   SOLO PARA MÓVILES (Scroll libre y apilado)
+   ========================================= */
+@media (max-width: 768px) {
+    .split-layout { 
+        flex-direction: column; 
+    }
+    .panel { 
+        padding: 6rem 1rem; 
+        min-height: 100vh; /* Cada panel es una pantalla completa hacia abajo */
+        flex: none; 
+    }
+    p, .btn { 
+        opacity: 1; /* El texto y el botón siempre están visibles */
+        transform: none; 
+    }
+    h2 { 
+        font-size: 2.5rem; 
+    }
+}
+
+/* --- SELECTOR DE IDIOMAS --- */
+.language-selector {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    z-index: 1000;
+    font-family: monospace, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Toque cristal moderno */
+}
+
+.language-selector a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.language-selector a:hover {
+    color: #00ffcc; /* Cambia esto por tu color corporativo si quieres */
+}
+
+.language-selector a.active {
+    color: #00ffcc; /* Color para el idioma seleccionado */
+    pointer-events: none; /* Desactiva el clic en el idioma actual */
+}
+
+.language-selector span {
+    margin: 0 10px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .language-selector {
+        top: 15px;
+        right: 20px;
+        font-size: 0.9rem;
+    }
+}
