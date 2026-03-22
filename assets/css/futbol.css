@@ -181,6 +181,7 @@ h1 {
 .back-nav a:hover {
     color: #111827;
 }
+
 /* =========================================
    SECCIÓN ACORDEÓN (FAQ / PROFUNDIZACIÓN)
    ========================================= */
@@ -238,6 +239,52 @@ details[open] summary.faq-title::after {
 .faq-content p {
     margin-bottom: 1rem;
 }
+
+/* =========================================
+   BOTÓN DE CAMBIO DE IDIOMA (DISEÑO PÍLDORA)
+   ========================================= */
+.lang-switch {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #9ca3af; /* Fondo gris sólido de tu foto */
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px; /* Bordes redondeados */
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lang-btn {
+    color: #ffffff; /* Letras blancas para el idioma inactivo */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    font-family: Arial, sans-serif;
+    transition: opacity 0.2s ease;
+}
+
+.lang-btn:hover {
+    opacity: 0.8;
+}
+
+.lang-active {
+    color: #00fceb; /* Color cyan/menta brillante para el idioma activo */
+    font-weight: 800;
+    font-size: 1.05rem;
+    font-family: Arial, sans-serif;
+    cursor: default;
+}
+
+.lang-divider {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
 /* =========================================
    ADAPTACIÓN PERFECTA PARA MÓVILES
    ========================================= */
@@ -249,4 +296,9 @@ details[open] summary.faq-title::after {
     .card { padding: 2rem 1.5rem; }
     .tech-grid { grid-template-columns: 1fr; } /* Fuerza a que sea 1 sola columna */
     .cta-button { padding: 1rem 2rem; width: 100%; text-align: center; }
+    .lang-switch {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.3rem 1rem;
+    }
 }
